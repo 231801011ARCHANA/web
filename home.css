@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.modal-content {
+    width: 80%;
+    margin: 0 auto;
+    height:fit-content;
+  }
+.modal-body {
+    padding: 0;
+}
+
+.myform {
+    box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+  }
+.btn-close {
+    position: absolute;
+    right: 0;
+    padding: 1em;
+}
+.form-control:focus {
+    box-shadow: inset 0 -1px 0 #7e7e7e;
+  }
+
+.modal-backdrop {
+    z-index: 1040;
+    opacity: 0.5; /* Control the transparency of the background */
+  }
+  
+.modal {
+    z-index: 1050;
+    opacity: 1; /* Ensure the modal content is fully visible */
+  }
+
+
+header{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header .logo{
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+    padding: 1.5rem;
+    text-decoration: none;
+}
+
+header .navbar a{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    padding: 1.5rem;
+    color: black;
+    text-decoration: none;
+}
+
+header .navbar a:hover{
+    color: rgb(232, 71, 135);
+}
+
+header .icons a{
+    font-size: 2rem;
+    color: #333;
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover{
+    color: rgb(232, 71, 135);
+}
+
+header #toggler{
+    display: none;
+}
+
+header .bar{
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.welcome {
+    color: rgb(0, 0, 0); /* Set to black or a dark color */
+    opacity: 1; /* Ensure opacity is full */
+}
+
+
+.popup-content {
+    position: absolute;
+    top: 60px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: auto;
+    display: none;
+  }
+  
+  .about:hover .popup-content {
+    display: flex;
+    transition: 3s linear;
+  }
+
+@media (max-width:768px){
+    header .bar{
+        display: block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0, 0, 0, 0.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+  
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .form-overlay{
+        display: none;
+    }
+
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        width: 100%;
+        background: #fff;
+        border: .1rem solid rgba(0, 0, 0, 0.1);
+        display: block;
+    }
+}
